@@ -17,7 +17,7 @@
                     type: 'select',
                     values:
                     {
-                        'Size - Small' : 60.00,
+                        'Size - Small' : 10.00,
                         'Size - Medium'   : 69.00,
                         'Size - Large'   : 79.99,
                         'Size - Extra Large'   : 89.00,

@@ -34,7 +34,7 @@
             var settings = $.extend({}, this.defaultOptions, options);
 
             //construct form
-            var formHTML = '<form id="'+settings.formId+'" name="_xclick" action="https://www.paypal.com/'+settings.countryCode+'/cgi-bin/webscr" method="post">\
+            var formHTML = '<form id="'+settings.formId+'" name="_xclick" data-ajax="false" action="https://www.paypal.com/'+settings.countryCode+'/cgi-bin/webscr" method="post">\
             <input type="hidden" name="cmd" value="_xclick">\
             <input type="hidden" name="business" value="'+settings.email+'">\
             <input type="hidden" name="currency_code" value="'+settings.currencyCode+'">\
