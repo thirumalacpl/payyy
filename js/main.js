@@ -7,7 +7,7 @@
         {
             formId: 'myPaypalButton',
             itemName: 'Buy a T-Shirt',
-            email: 'paypalemailadress@gmail.com',
+            email: 'naren@advicesync-consulting.com',
             basePrice: 59.00,
             options:
             {

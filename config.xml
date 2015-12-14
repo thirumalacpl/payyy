@@ -120,7 +120,7 @@
 <gap:plugin name="cordova-plugin-camera" source="npm" />
 
 
-
+ <gap:plugin name="com.paypal.cordova.mobilesdk" source="npm" />
 
 
 
