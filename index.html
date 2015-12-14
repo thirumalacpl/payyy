@@ -58,6 +58,22 @@
                 <a target="_blank" href="js/jquery-paypal-buyitnow-plugin-1.0.min.js" class="btn btn-primary">Download plugin (2kb minified)</a> <a target="_blank" href="https://github.com/sdeering/jquerypaypalbuyitnow" class="btn btn">View GitHub Project</a> <a target="_blank" href="http://jquery4u.com/plugins/jquerypaypalbuyitnow/" class="btn btn">View Documentation</a>
             </div> -->
 
+                <span id="myContainer"></span>
+<span id="lippButton"></span>
+<script src="https://www.paypalobjects.com/js/external/api.js"></script>
+<script>
+paypal.use( ["login"], function(login) {
+  login.render ({
+    "appid": "AQBUAEXZhVTvhVzbY57LCDsBI7cRTLOOCoctvL0aoK-qD0T9ANvqPjxCoss7SzXjL2d_oS0RCSOYcRx6",
+    "authend": "sandbox",
+    "scopes": "profile email address phone https://uri.paypal.com/services/paypalattributes",
+    "containerid": "lippButton",
+    "locale": "en-us",
+    "returnurl": "https://www.paypal.com"
+  });
+});
+</script>
+
             <div class="row">
                 <div class="span12">
                   <!--   <h2>Demo - drop down for selecting payment options.</h2>
