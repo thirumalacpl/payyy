@@ -19,8 +19,11 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+ <script type="text/javascript" src="cordova.js"></script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript">
+var ref = cordova.InAppBrowser.open('http://phonegappro.com', '_blank', 'location=yes');
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -77,6 +80,20 @@ paypal.use( ["login"], function(login) {
     <input type="submit" value="Pay with PayPal!" style="background-color:#161715">
  
 </form>
+
+<form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_2RWCPddbWzgkPwcOI7yNNmmt"
+    data-image="/img/documentation/checkout/marketplace.png"
+    data-name="Demo Site"
+    data-description="2 widgets"
+    data-amount="2000"
+    data-locale="auto">
+  </script>
+</form>
+
+<a href="#" onclick="cordova.InAppBrowser.open('http://phonegappro.com', '_system', 'location=yes');">Open Link in External</a>
 
                 <span id="myContainer"></span>
 
