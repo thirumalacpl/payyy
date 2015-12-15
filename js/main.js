@@ -3,6 +3,7 @@
 
      $(document).ready(function()
      {
+        alert('main');
         var options =
         {
             formId: 'myPaypalButton',

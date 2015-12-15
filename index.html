@@ -29,36 +29,8 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">jQuery Paypal</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="http://jquery4u.com/contact/">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="container">
-
-            <!-- Main hero unit for a primary marketing message or call to action -->
-     <!--        <div class="hero-unit">
-                <h1>jQuery Paypal Buy It Now Plugin</h1>
-                <p>This is an easy to use jQuery Plugin which creates a Dynamic Paypal Buy It Now Button. You can customise drop down down options and specify your paypal email address for payment.</p>
-                <p><a href="#" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700');"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark"></a></p>
-                <a target="_blank" href="js/jquery-paypal-buyitnow-plugin-1.0.min.js" class="btn btn-primary">Download plugin (2kb minified)</a> <a target="_blank" href="https://github.com/sdeering/jquerypaypalbuyitnow" class="btn btn">View GitHub Project</a> <a target="_blank" href="http://jquery4u.com/plugins/jquerypaypalbuyitnow/" class="btn btn">View Documentation</a>
-            </div> -->
-
-                <span id="myContainer"></span>
 <span id="lippButton"></span>
 <script src="https://www.paypalobjects.com/js/external/api.js"></script>
 <script>
@@ -73,6 +45,41 @@ paypal.use( ["login"], function(login) {
   });
 });
 </script>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" data-ajax="false" method="post" >
+ 
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="naren@advicesync-consulting.com">
+    <strong>Donation / Contribution? </strong><br />
+    <select name="item_name">
+      <option value="Donation">Donation</option>
+      <option value="Contribution">Contribution</option>
+    </select>
+ 
+<!--     <strong>Which tutorial are you donating for?</strong><br />   
+    <select name="item_number">
+      <option value="PayPal Form Tutorial">The PayPal Form Tutorial</option>
+      <option value="Amazon S3 Tutorial">The Amazon S3 Tutorial</option>
+      <option value="Some Other Tutorial">Some Other Tutorial</option>
+    </select> -->
+ 
+    <strong>How much do you want to donate?</strong><br />
+    $ <input type="number" name="amount" style="background-color:#E8E8E8;color:black">
+ 
+    <input type="hidden" name="no_shipping" value="0">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="lc" value="AU">
+    <input type="hidden" name="bn" value="PP-BuyNowBF">
+    <input type="hidden" name="return" value="http://net.tutsplus.com/payment-complete/">
+ 
+    <br /><br />
+    <input type="submit" value="Pay with PayPal!" style="background-color:#161715">
+ 
+</form>
+
+                <span id="myContainer"></span>
+
 
             <div class="row">
                 <div class="span12">
@@ -133,48 +140,6 @@ paypal.use( ["login"], function(login) {
 
             <hr>
 
-<!--             <div class="row">
-                <div class="span12">
-                    <h2>Current versions and updates</h2>
-                    <p><strong>1.0 - Initial version - 02/12/2012</strong>
-                        <ul>
-                            <li>Support for only 1 drop down box with options.</li>
-                            <li>Supports for currency and country.</li>
-                            <li>Supports payment to any email address.</li>
-                            <li>Supports item name.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div> -->
-
-            <hr>
-
-<!--             <div class="row">
-                <div class="span12">
-                    <h2>Features coming soon</h2>
-                    <ul>
-                        <li>Support for mutiple drop downs (base price related).</li>
-                        <li>Supports for number input (base price related).</li>
-                        <li>Supports for item options to be passed through to paypal.</li>
-                        <li>Supports for purchase quantity.</li>
-                    </ul>
-                </div>
-            </div> -->
-
-            <hr>
-
-            <div class="row">
-                <div class="span12">
-                  <!--   <h2>Author</h2>
-                    Sam Deering / jQuery4u.com -->
-                </div>
-            </div>
-
-            <hr>
-
-            <footer>
-           <!--      <p>&copy; jQuery4u.com 2012</p> -->
-            </footer>
 
         </div> <!-- /container -->
 
